@@ -1,6 +1,6 @@
-# GPT-4 Function Calling Chatbot with Weather API
+# OpenAI Function Calling Chatbot with Weather API
 
-This is a simple chatbot application that uses GPT-4 to interact with users and a weather API to provide real-time weather data. 
+This is a simple chatbot application that uses `gpt-3.5-turbo-0613` to interact with users and a weather API to provide real-time weather data. 
 
 ## Features
 - Real-time messaging with Socket.IO

@@ -3,7 +3,7 @@ var socket = io();
 // Function to create a new list item
 function createListItem(text) {
     var li = document.createElement('li');
-    li.textContent = text;
+    li.innerHTML = text.replace(/\n/g, '<br>'); // Replace newline characters with <br> tags
     return li;
 }
 
@@ -11,7 +11,15 @@ function createListItem(text) {
 function createLoadingItem() {
     var li = document.createElement('li');
     li.id = 'loading';
-    li.textContent = '...';
+    var span1 = document.createElement('span');
+    span1.className = 'dot';
+    var span2 = document.createElement('span');
+    span2.className = 'dot';
+    var span3 = document.createElement('span');
+    span3.className = 'dot';
+    li.appendChild(span1);
+    li.appendChild(span2);
+    li.appendChild(span3);
     return li;
 }
 
@@ -37,18 +45,7 @@ document.getElementById('message-form').addEventListener('submit', function (e) 
     return false;
 });
 
-// Function to create a loading animation
-function createLoadingItem() {
-    var li = document.createElement('li');
-    li.id = 'loading';
-    var span1 = document.createElement('span');
-    span1.className = 'dot';
-    var span2 = document.createElement('span');
-    span2.className = 'dot';
-    var span3 = document.createElement('span');
-    span3.className = 'dot';
-    li.appendChild(span1);
-    li.appendChild(span2);
-    li.appendChild(span3);
-    return li;
-}
+// Automatically focus on the input field when the page is loaded
+window.addEventListener('load', function () {
+    document.getElementById('message-input').focus();
+});
