@@ -97,3 +97,5 @@ client-secret.json
 token.json
 
 .DS_Store
+# Local Netlify folder
+.netlify
