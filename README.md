@@ -6,6 +6,14 @@ This is a simple chatbot application that uses `gpt-3.5-turbo-0613` to interact 
   <img src="https://github.com/RafalMCichon/openai-function-calling-weather-api/blob/main/img/openai-function-calling-weather-api.png" width="292" height="430">
 </p>
 
+## Prerequisites
+
+Before running this code, make sure you have the following prerequisites:
+
+- [Node.js](https://nodejs.org/en) installed (version 14 or higher)
+- [OpenAI API key ](https://platform.openai.com/account/api-keys)
+- [Weather API key](https://www.weatherapi.com/my/) (used for the actual weather data)
+
 ## Features
 - Real-time messaging with Socket.IO
 - Conversation history management
