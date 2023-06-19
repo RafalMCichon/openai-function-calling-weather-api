@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat with GPT-4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f8fa;
+        }
+
+        #chat-box {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            height: 600px;
+            margin: 50px auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        #messages {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            flex: 1;
+            overflow: auto;
+            padding-bottom: 10px;
+        }
+
+        #messages li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #messages li:nth-child(odd) {
+            align-self: flex-end;
+            background: #007bff;
+            color: #fff;
+        }
+
+        #messages li:nth-child(even) {
+            align-self: flex-start;
+            background: #e9e9eb;
+            color: #333;
+        }
+
+        #message-form {
+            position: sticky;
+            bottom: 0;
+            background: #fff;
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        #message-input {
+            flex-grow: 1;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #message-input:focus {
+            outline: none;
+        }
+
+        #message-form button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #message-form button:hover {
+            background: #0056b3;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            animation: dot 1.4s infinite;
+            animation-fill-mode: both;
+        }
+
+        .dot:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes dot {
+
+            0%,
+            80%,
+            100% {
+                transform: scale(0);
+            }
+
+            40% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chat-box">
+        <ul id="messages"></ul>
+        <form id="message-form">
+            <input id="message-input" autocomplete="off" /><button>Send</button>
+        </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
