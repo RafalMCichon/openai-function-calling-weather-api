@@ -52,7 +52,3 @@ Contributions, issues, and feature requests are welcome!
 
 ## License
 This project is licensed under the terms of the MIT license.
-
-```bash
-Remember to replace "your-repo-url" and "your-project-folder" with the URL of your repository and the name of your project's folder, respectively.
-```
