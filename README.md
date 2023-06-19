@@ -2,7 +2,9 @@
 
 This is a simple chatbot application that uses `gpt-3.5-turbo-0613` to interact with users and a weather API to provide real-time weather data. 
 
-<img src="https://github.com/RafalMCichon/openai-function-calling-weather-api/blob/main/img/openai-function-calling-weather-api.png" width="292" height="430">
+<p align="center">
+  <img src="https://github.com/RafalMCichon/openai-function-calling-weather-api/blob/main/img/openai-function-calling-weather-api.png" width="292" height="430">
+</p>
 
 ## Features
 - Real-time messaging with Socket.IO
